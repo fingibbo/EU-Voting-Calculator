@@ -1,0 +1,9 @@
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\bin\Debug\EU Voting Calculator Simulator.exe.config
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\bin\Debug\EU Voting Calculator Simulator.exe
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\bin\Debug\EU Voting Calculator Simulator.pdb
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\obj\Debug\EU Voting Calculator Simulator.csprojAssemblyReference.cache
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\obj\Debug\EU_Voting_Calculator_Simulator.Form1.resources
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\obj\Debug\EU_Voting_Calculator_Simulator.Properties.Resources.resources
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\obj\Debug\EU Voting Calculator Simulator.csproj.GenerateResource.cache
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\obj\Debug\EU Voting Calculator Simulator.exe
+C:\Users\fingi\Documents\UoL\Year 1\Object Orientated Programming\Assignments\Assignment 1\EU Voting Calculator Simulator\EU Voting Calculator Simulator\obj\Debug\EU Voting Calculator Simulator.pdb
