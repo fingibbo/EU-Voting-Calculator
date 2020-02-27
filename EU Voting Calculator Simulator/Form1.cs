@@ -14,10 +14,8 @@ namespace EU_Voting_Calculator_Simulator
     {
         public static int voteMax = 0;
         public static int voteYes = 0;
-        public int voteNo = 0;
-        public int voteAb = 0;
-        public bool passOrNot = false;
-
+        public static int voteNo = 0;
+        public static int voteAb = 0;
 
         public Form1()
         {
