@@ -12,14 +12,12 @@ namespace EU_Voting_Calculator_Simulator
 {
     public partial class Form1 : Form
     {
-        public int voteMax = 0;
-        public int voteYes = 0;
+        public static int voteMax = 0;
+        public static int voteYes = 0;
         public int voteNo = 0;
         public int voteAb = 0;
-        public double popMax = 0.0;
-        public double popYes = 0.0;
-        public double popNo = 0.0;
-        public double popAb = 0.0;
+        public bool passOrNot = false;
+
 
         public Form1()
         {
@@ -198,6 +196,10 @@ namespace EU_Voting_Calculator_Simulator
 
         private void submitVotesButton_Click(object sender, EventArgs e)
         {
+            voteMax = 0;
+            voteYes = 0;
+            voteNo = 0;
+            voteAb = 0;
             foreach(GroupBox box in submitVotesButton.Parent.Controls.OfType<GroupBox>())
             {
 
@@ -229,6 +231,109 @@ namespace EU_Voting_Calculator_Simulator
             voteYesLabel.Text = "Countries Voting Yes: " + Convert.ToString(voteYes);
             voteNoLabel.Text = "Countries Voting No: " + Convert.ToString(voteNo);
             voteAbLabel.Text = "Countries Abstaining: " + Convert.ToString(voteAb);
+        }
+
+        private void ruleQualMaj_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ruleQualMaj.Checked == true)
+            {
+                ruleReinQualMaj.Checked = false;
+                ruleSimpMaj.Checked = false;
+                ruleUnanimity.Checked = false;
+                ruleExpLabel.Text = "Rule Explanation: Minimum “Yes” required for adoption is 55%";
+            }
+        }
+
+        private void ruleReinQualMaj_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ruleReinQualMaj.Checked == true)
+            {
+                ruleQualMaj.Checked = false;
+                ruleSimpMaj.Checked = false;
+                ruleUnanimity.Checked = false;
+                ruleExpLabel.Text = "Rule Explanation: Minimum “Yes” required for adoption is 72%";
+            }
+
+        }
+
+        private void ruleSimpMaj_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ruleSimpMaj.Checked == true)
+            {
+                ruleQualMaj.Checked = false;
+                ruleReinQualMaj.Checked = false;
+                ruleUnanimity.Checked = false;
+                ruleExpLabel.Text = "Rule Explanation: Minimum “Yes” required for adoption is 50%";
+            }
+        }
+
+        private void ruleUnanimity_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ruleUnanimity.Checked == true)
+            {
+                ruleQualMaj.Checked = false;
+                ruleReinQualMaj.Checked = false;
+                ruleSimpMaj.Checked = false;
+                ruleExpLabel.Text = "Rule Explanation: Minimum “Yes” required for adoption is 100%";
+            }
+
+        }
+
+        private void submitRuleButton_Click(object sender, EventArgs e)
+        {
+            if(voteMax >= 1) 
+            {
+                double votePercent = ((double)voteYes / voteMax) * 100;
+                decimal votePCon = Convert.ToDecimal(votePercent);
+                votePCon = Math.Round(votePCon, 2);
+                foreach (CheckBox checkBox in submitRuleButton.Parent.Controls.OfType<CheckBox>())
+                {
+                    if (checkBox.Checked == true && checkBox.Text == "Qualified Majority")
+                    {
+                        if (votePercent >= 55.0)
+                        {
+                            voteResultLabel.Text = "Vote has passed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                        if (votePercent < 55.0)
+                        {
+                            voteResultLabel.Text = "Vote has failed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                    }
+                    if (checkBox.Checked == true && checkBox.Text == "Reinforced Qualified Majority")
+                    {
+                        if (votePercent >= 72.0)
+                        {
+                            voteResultLabel.Text = "Vote has passed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                        if (votePercent < 72.0)
+                        {
+                            voteResultLabel.Text = "Vote has failed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                    }
+                    if (checkBox.Checked == true && checkBox.Text == "Simple Majority")
+                    {
+                        if (votePercent >= 50.0)
+                        {
+                            voteResultLabel.Text = "Vote has passed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                        if (votePercent < 50.0)
+                        {
+                            voteResultLabel.Text = "Vote has failed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                    }
+                    if (checkBox.Checked == true && checkBox.Text == "Unanimity")
+                    {
+                        if (votePercent == 100.0)
+                        {
+                            voteResultLabel.Text = "Vote has passed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                        if (votePercent < 100.0)
+                        {
+                            voteResultLabel.Text = "Vote has failed with " + Convert.ToString(votePCon) + "% of votes.";
+                        }
+                    }
+                }
+            }
         }
     }
 }

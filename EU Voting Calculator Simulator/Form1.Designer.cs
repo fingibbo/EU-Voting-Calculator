@@ -47,6 +47,10 @@
             this.belgiumCheckNo = new System.Windows.Forms.CheckBox();
             this.belgiumCheckBox = new System.Windows.Forms.CheckBox();
             this.allCountriesGroupBox = new System.Windows.Forms.GroupBox();
+            this.allYes = new System.Windows.Forms.Button();
+            this.eZonePartCont = new System.Windows.Forms.Button();
+            this.allPartCont = new System.Windows.Forms.Button();
+            this.submitVotesButton = new System.Windows.Forms.Button();
             this.swedenGroup = new System.Windows.Forms.GroupBox();
             this.swedenVotes = new System.Windows.Forms.GroupBox();
             this.swedenCheckAb = new System.Windows.Forms.CheckBox();
@@ -193,15 +197,20 @@
             this.croatiaCheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.submitVotesButton = new System.Windows.Forms.Button();
-            this.allPartCont = new System.Windows.Forms.Button();
-            this.eZonePartCont = new System.Windows.Forms.Button();
-            this.allYes = new System.Windows.Forms.Button();
             this.resultGroup = new System.Windows.Forms.GroupBox();
-            this.voteMaxLabel = new System.Windows.Forms.Label();
-            this.voteYesLabel = new System.Windows.Forms.Label();
-            this.voteNoLabel = new System.Windows.Forms.Label();
+            this.voteRulesGroup = new System.Windows.Forms.GroupBox();
+            this.voteResultLabel = new System.Windows.Forms.Label();
+            this.submitRuleButton = new System.Windows.Forms.Button();
+            this.ruleExpLabel = new System.Windows.Forms.Label();
+            this.ruleUnanimity = new System.Windows.Forms.CheckBox();
+            this.ruleSimpMaj = new System.Windows.Forms.CheckBox();
+            this.ruleReinQualMaj = new System.Windows.Forms.CheckBox();
+            this.ruleQualMaj = new System.Windows.Forms.CheckBox();
+            this.voteTallyLabel = new System.Windows.Forms.Label();
             this.voteAbLabel = new System.Windows.Forms.Label();
+            this.voteNoLabel = new System.Windows.Forms.Label();
+            this.voteYesLabel = new System.Windows.Forms.Label();
+            this.voteMaxLabel = new System.Windows.Forms.Label();
             this.austriaGroup.SuspendLayout();
             this.austriaVotes.SuspendLayout();
             this.bulgariaGroup.SuspendLayout();
@@ -258,6 +267,7 @@
             this.croatiaGroup.SuspendLayout();
             this.croatiaVotes.SuspendLayout();
             this.resultGroup.SuspendLayout();
+            this.voteRulesGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // austriaGroup
@@ -513,6 +523,50 @@
             this.allCountriesGroupBox.Size = new System.Drawing.Size(567, 1599);
             this.allCountriesGroupBox.TabIndex = 8;
             this.allCountriesGroupBox.TabStop = false;
+            // 
+            // allYes
+            // 
+            this.allYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.allYes.Location = new System.Drawing.Point(379, 49);
+            this.allYes.Name = "allYes";
+            this.allYes.Size = new System.Drawing.Size(180, 23);
+            this.allYes.TabIndex = 22;
+            this.allYes.Text = "Reset all to yes";
+            this.allYes.UseVisualStyleBackColor = true;
+            this.allYes.Click += new System.EventHandler(this.allYes_Click);
+            // 
+            // eZonePartCont
+            // 
+            this.eZonePartCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.eZonePartCont.Location = new System.Drawing.Point(193, 49);
+            this.eZonePartCont.Name = "eZonePartCont";
+            this.eZonePartCont.Size = new System.Drawing.Size(180, 23);
+            this.eZonePartCont.TabIndex = 21;
+            this.eZonePartCont.Text = "Only Eurozone countries participating";
+            this.eZonePartCont.UseVisualStyleBackColor = true;
+            this.eZonePartCont.Click += new System.EventHandler(this.eZonePartCont_Click);
+            // 
+            // allPartCont
+            // 
+            this.allPartCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.allPartCont.Location = new System.Drawing.Point(7, 49);
+            this.allPartCont.Name = "allPartCont";
+            this.allPartCont.Size = new System.Drawing.Size(180, 23);
+            this.allPartCont.TabIndex = 20;
+            this.allPartCont.Text = "All countries participating";
+            this.allPartCont.UseVisualStyleBackColor = true;
+            this.allPartCont.Click += new System.EventHandler(this.allPartCont_Click);
+            // 
+            // submitVotesButton
+            // 
+            this.submitVotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.submitVotesButton.Location = new System.Drawing.Point(6, 1543);
+            this.submitVotesButton.Name = "submitVotesButton";
+            this.submitVotesButton.Size = new System.Drawing.Size(548, 44);
+            this.submitVotesButton.TabIndex = 19;
+            this.submitVotesButton.Text = "SUBMIT VOTING DATA";
+            this.submitVotesButton.UseVisualStyleBackColor = true;
+            this.submitVotesButton.Click += new System.EventHandler(this.submitVotesButton_Click);
             // 
             // swedenGroup
             // 
@@ -2238,52 +2292,10 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Participating Countries";
             // 
-            // submitVotesButton
-            // 
-            this.submitVotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.submitVotesButton.Location = new System.Drawing.Point(6, 1543);
-            this.submitVotesButton.Name = "submitVotesButton";
-            this.submitVotesButton.Size = new System.Drawing.Size(548, 44);
-            this.submitVotesButton.TabIndex = 19;
-            this.submitVotesButton.Text = "SUBMIT VOTING DATA";
-            this.submitVotesButton.UseVisualStyleBackColor = true;
-            this.submitVotesButton.Click += new System.EventHandler(this.submitVotesButton_Click);
-            // 
-            // allPartCont
-            // 
-            this.allPartCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
-            this.allPartCont.Location = new System.Drawing.Point(7, 49);
-            this.allPartCont.Name = "allPartCont";
-            this.allPartCont.Size = new System.Drawing.Size(180, 23);
-            this.allPartCont.TabIndex = 20;
-            this.allPartCont.Text = "All countries participating";
-            this.allPartCont.UseVisualStyleBackColor = true;
-            this.allPartCont.Click += new System.EventHandler(this.allPartCont_Click);
-            // 
-            // eZonePartCont
-            // 
-            this.eZonePartCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
-            this.eZonePartCont.Location = new System.Drawing.Point(193, 49);
-            this.eZonePartCont.Name = "eZonePartCont";
-            this.eZonePartCont.Size = new System.Drawing.Size(180, 23);
-            this.eZonePartCont.TabIndex = 21;
-            this.eZonePartCont.Text = "Only Eurozone countries participating";
-            this.eZonePartCont.UseVisualStyleBackColor = true;
-            this.eZonePartCont.Click += new System.EventHandler(this.eZonePartCont_Click);
-            // 
-            // allYes
-            // 
-            this.allYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
-            this.allYes.Location = new System.Drawing.Point(379, 49);
-            this.allYes.Name = "allYes";
-            this.allYes.Size = new System.Drawing.Size(180, 23);
-            this.allYes.TabIndex = 22;
-            this.allYes.Text = "Reset all to yes";
-            this.allYes.UseVisualStyleBackColor = true;
-            this.allYes.Click += new System.EventHandler(this.allYes_Click);
-            // 
             // resultGroup
             // 
+            this.resultGroup.Controls.Add(this.voteRulesGroup);
+            this.resultGroup.Controls.Add(this.voteTallyLabel);
             this.resultGroup.Controls.Add(this.voteAbLabel);
             this.resultGroup.Controls.Add(this.voteNoLabel);
             this.resultGroup.Controls.Add(this.voteYesLabel);
@@ -2294,52 +2306,149 @@
             this.resultGroup.TabIndex = 9;
             this.resultGroup.TabStop = false;
             // 
-            // voteMaxLabel
+            // voteRulesGroup
             // 
-            this.voteMaxLabel.AutoSize = true;
-            this.voteMaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.voteMaxLabel.Location = new System.Drawing.Point(6, 18);
-            this.voteMaxLabel.Name = "voteMaxLabel";
-            this.voteMaxLabel.Size = new System.Drawing.Size(211, 25);
-            this.voteMaxLabel.TabIndex = 0;
-            this.voteMaxLabel.Text = "Countries participating:";
+            this.voteRulesGroup.Controls.Add(this.voteResultLabel);
+            this.voteRulesGroup.Controls.Add(this.submitRuleButton);
+            this.voteRulesGroup.Controls.Add(this.ruleExpLabel);
+            this.voteRulesGroup.Controls.Add(this.ruleUnanimity);
+            this.voteRulesGroup.Controls.Add(this.ruleSimpMaj);
+            this.voteRulesGroup.Controls.Add(this.ruleReinQualMaj);
+            this.voteRulesGroup.Controls.Add(this.ruleQualMaj);
+            this.voteRulesGroup.Location = new System.Drawing.Point(6, 153);
+            this.voteRulesGroup.Name = "voteRulesGroup";
+            this.voteRulesGroup.Size = new System.Drawing.Size(442, 351);
+            this.voteRulesGroup.TabIndex = 5;
+            this.voteRulesGroup.TabStop = false;
             // 
-            // voteYesLabel
+            // voteResultLabel
             // 
-            this.voteYesLabel.AutoSize = true;
-            this.voteYesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.voteYesLabel.Location = new System.Drawing.Point(6, 43);
-            this.voteYesLabel.Name = "voteYesLabel";
-            this.voteYesLabel.Size = new System.Drawing.Size(132, 25);
-            this.voteYesLabel.TabIndex = 1;
-            this.voteYesLabel.Text = "Votes for yes:";
+            this.voteResultLabel.AutoSize = true;
+            this.voteResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.4F);
+            this.voteResultLabel.Location = new System.Drawing.Point(9, 249);
+            this.voteResultLabel.Name = "voteResultLabel";
+            this.voteResultLabel.Size = new System.Drawing.Size(0, 20);
+            this.voteResultLabel.TabIndex = 6;
             // 
-            // voteNoLabel
+            // submitRuleButton
             // 
-            this.voteNoLabel.AutoSize = true;
-            this.voteNoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.voteNoLabel.Location = new System.Drawing.Point(6, 68);
-            this.voteNoLabel.Name = "voteNoLabel";
-            this.voteNoLabel.Size = new System.Drawing.Size(123, 25);
-            this.voteNoLabel.TabIndex = 2;
-            this.voteNoLabel.Text = "Votes for no:";
+            this.submitRuleButton.Location = new System.Drawing.Point(5, 183);
+            this.submitRuleButton.Name = "submitRuleButton";
+            this.submitRuleButton.Size = new System.Drawing.Size(431, 48);
+            this.submitRuleButton.TabIndex = 5;
+            this.submitRuleButton.Text = "SUBMIT RULE CHOICE";
+            this.submitRuleButton.UseVisualStyleBackColor = true;
+            this.submitRuleButton.Click += new System.EventHandler(this.submitRuleButton_Click);
+            // 
+            // ruleExpLabel
+            // 
+            this.ruleExpLabel.AutoSize = true;
+            this.ruleExpLabel.Location = new System.Drawing.Point(6, 141);
+            this.ruleExpLabel.Name = "ruleExpLabel";
+            this.ruleExpLabel.Size = new System.Drawing.Size(122, 17);
+            this.ruleExpLabel.TabIndex = 4;
+            this.ruleExpLabel.Text = "Rule Explanation: ";
+            // 
+            // ruleUnanimity
+            // 
+            this.ruleUnanimity.AutoSize = true;
+            this.ruleUnanimity.Location = new System.Drawing.Point(6, 101);
+            this.ruleUnanimity.Name = "ruleUnanimity";
+            this.ruleUnanimity.Size = new System.Drawing.Size(92, 21);
+            this.ruleUnanimity.TabIndex = 3;
+            this.ruleUnanimity.Text = "Unanimity";
+            this.ruleUnanimity.UseVisualStyleBackColor = true;
+            this.ruleUnanimity.CheckedChanged += new System.EventHandler(this.ruleUnanimity_CheckedChanged);
+            // 
+            // ruleSimpMaj
+            // 
+            this.ruleSimpMaj.AutoSize = true;
+            this.ruleSimpMaj.Location = new System.Drawing.Point(7, 74);
+            this.ruleSimpMaj.Name = "ruleSimpMaj";
+            this.ruleSimpMaj.Size = new System.Drawing.Size(125, 21);
+            this.ruleSimpMaj.TabIndex = 2;
+            this.ruleSimpMaj.Text = "Simple Majority";
+            this.ruleSimpMaj.UseVisualStyleBackColor = true;
+            this.ruleSimpMaj.CheckedChanged += new System.EventHandler(this.ruleSimpMaj_CheckedChanged);
+            // 
+            // ruleReinQualMaj
+            // 
+            this.ruleReinQualMaj.AutoSize = true;
+            this.ruleReinQualMaj.Location = new System.Drawing.Point(7, 47);
+            this.ruleReinQualMaj.Name = "ruleReinQualMaj";
+            this.ruleReinQualMaj.Size = new System.Drawing.Size(212, 21);
+            this.ruleReinQualMaj.TabIndex = 1;
+            this.ruleReinQualMaj.Text = "Reinforced Qualified Majority";
+            this.ruleReinQualMaj.UseVisualStyleBackColor = true;
+            this.ruleReinQualMaj.CheckedChanged += new System.EventHandler(this.ruleReinQualMaj_CheckedChanged);
+            // 
+            // ruleQualMaj
+            // 
+            this.ruleQualMaj.AutoSize = true;
+            this.ruleQualMaj.Location = new System.Drawing.Point(7, 21);
+            this.ruleQualMaj.Name = "ruleQualMaj";
+            this.ruleQualMaj.Size = new System.Drawing.Size(139, 21);
+            this.ruleQualMaj.TabIndex = 0;
+            this.ruleQualMaj.Text = "Qualified Majority";
+            this.ruleQualMaj.UseVisualStyleBackColor = true;
+            this.ruleQualMaj.CheckedChanged += new System.EventHandler(this.ruleQualMaj_CheckedChanged);
+            // 
+            // voteTallyLabel
+            // 
+            this.voteTallyLabel.AutoSize = true;
+            this.voteTallyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.voteTallyLabel.Location = new System.Drawing.Point(8, 21);
+            this.voteTallyLabel.Name = "voteTallyLabel";
+            this.voteTallyLabel.Size = new System.Drawing.Size(125, 29);
+            this.voteTallyLabel.TabIndex = 4;
+            this.voteTallyLabel.Text = "Vote tally:";
             // 
             // voteAbLabel
             // 
             this.voteAbLabel.AutoSize = true;
             this.voteAbLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.voteAbLabel.Location = new System.Drawing.Point(6, 93);
+            this.voteAbLabel.Location = new System.Drawing.Point(6, 125);
             this.voteAbLabel.Name = "voteAbLabel";
             this.voteAbLabel.Size = new System.Drawing.Size(164, 25);
             this.voteAbLabel.TabIndex = 3;
             this.voteAbLabel.Text = "Votes for abstain:";
+            // 
+            // voteNoLabel
+            // 
+            this.voteNoLabel.AutoSize = true;
+            this.voteNoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.voteNoLabel.Location = new System.Drawing.Point(6, 100);
+            this.voteNoLabel.Name = "voteNoLabel";
+            this.voteNoLabel.Size = new System.Drawing.Size(123, 25);
+            this.voteNoLabel.TabIndex = 2;
+            this.voteNoLabel.Text = "Votes for no:";
+            // 
+            // voteYesLabel
+            // 
+            this.voteYesLabel.AutoSize = true;
+            this.voteYesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.voteYesLabel.Location = new System.Drawing.Point(6, 75);
+            this.voteYesLabel.Name = "voteYesLabel";
+            this.voteYesLabel.Size = new System.Drawing.Size(132, 25);
+            this.voteYesLabel.TabIndex = 1;
+            this.voteYesLabel.Text = "Votes for yes:";
+            // 
+            // voteMaxLabel
+            // 
+            this.voteMaxLabel.AutoSize = true;
+            this.voteMaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.voteMaxLabel.Location = new System.Drawing.Point(6, 50);
+            this.voteMaxLabel.Name = "voteMaxLabel";
+            this.voteMaxLabel.Size = new System.Drawing.Size(211, 25);
+            this.voteMaxLabel.TabIndex = 0;
+            this.voteMaxLabel.Text = "Countries participating:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1072, 513);
+            this.ClientSize = new System.Drawing.Size(1093, 513);
             this.Controls.Add(this.resultGroup);
             this.Controls.Add(this.allCountriesGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2458,6 +2567,8 @@
             this.croatiaVotes.PerformLayout();
             this.resultGroup.ResumeLayout(false);
             this.resultGroup.PerformLayout();
+            this.voteRulesGroup.ResumeLayout(false);
+            this.voteRulesGroup.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2638,6 +2749,15 @@
         private System.Windows.Forms.Label voteNoLabel;
         private System.Windows.Forms.Label voteYesLabel;
         private System.Windows.Forms.Label voteMaxLabel;
+        private System.Windows.Forms.Label voteTallyLabel;
+        private System.Windows.Forms.GroupBox voteRulesGroup;
+        private System.Windows.Forms.Label ruleExpLabel;
+        private System.Windows.Forms.CheckBox ruleUnanimity;
+        private System.Windows.Forms.CheckBox ruleSimpMaj;
+        private System.Windows.Forms.CheckBox ruleReinQualMaj;
+        private System.Windows.Forms.CheckBox ruleQualMaj;
+        private System.Windows.Forms.Button submitRuleButton;
+        private System.Windows.Forms.Label voteResultLabel;
     }
 }
 
